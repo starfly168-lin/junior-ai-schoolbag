@@ -1,0 +1,4 @@
+# V3.5 pages and their API are served together by the Access-protected Worker.
+exclude:
+  - v35/
+  - worker/

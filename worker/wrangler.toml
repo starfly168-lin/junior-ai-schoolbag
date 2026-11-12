@@ -1,0 +1,18 @@
+name = "junior-ai-schoolbag-v35"
+main = "ai-tutor.js"
+compatibility_date = "2026-11-12"
+workers_dev = true
+preview_urls = false
+keep_vars = true
+
+[assets]
+directory = "../v35"
+run_worker_first = ["/api/*"]
+
+[[durable_objects.bindings]]
+name = "TUTOR_QUOTA"
+class_name = "TutorQuota"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["TutorQuota"]
