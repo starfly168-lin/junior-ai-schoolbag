@@ -65,7 +65,7 @@ async function requestTutor(question, studentAnswer) {
                (response.status === 403 && !data.error)) {
       target.textContent = '需要 Cloudflare Access 登入。請重新整理頁面，並依畫面指示登入。';
     } else if (['ACCESS_CONFIG', 'TUTOR_CONFIG', 'AI_CONFIG'].includes(data.code)) {
-      target.textContent = 'AI 家教服務設定異常，請先用上方的題庫提示。';
+      target.textContent = `AI 家教服務設定異常，請先用上方的題庫提示。（${data.code}）`;
     } else if (response.status === 504) {
       target.textContent = 'AI 等候逾時，請稍後再試或先用題庫提示。';
     } else {
